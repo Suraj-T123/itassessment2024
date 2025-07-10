@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Suraj Thapa - Gallery</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #fefcfb;
+        color: #111;
+      }
+      .top-bar {
+        background: #123c69;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .top-bar a {
+        color: #fff;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .top-bar a:hover {
+        color: #ff6f61;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.2rem;
+        padding: 2rem;
+        max-width: 1100px;
+        margin: auto;
+      }
+      .thumb {
+        border: 3px solid #123c69;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+      .thumb:hover {
+        transform: scale(1.05);
+        border-color: #ff6f61;
+      }
+      .thumb img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      footer {
+        background: #123c69;
+        color: #eee;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <strong style="color: white">Suraj Thapa</strong>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <h1>Creative Gallery</h1>
+    <div class="gallery-grid">
+      <a class="thumb" href="images/art1Suraj Thapa.jpg" target="_blank"
+        ><img src="images/art1.jpg" alt="cats"
+      /></a>
+      <a class="thumb" href="images/art2.jpg" target="_blank"
+        ><img src="images/art2.jpg" alt="cats again"
+      /></a>
+      <a class="thumb" href="images/art3.jpg" target="_blank"
+        ><img src="images/art3.jpg" alt="sleepy cat"
+      /></a>
+      <a class="thumb" href="images/art4.jpg" target="_blank"
+        ><img src="images/art4.jpg" alt="happy cat"
+      /></a>
+      <a class="thumb" href="images/art5.jpg" target="_blank"
+        ><img src="images/art5.jpg" alt="just cats"
+      /></a>
+      <a class="thumb" href="images/art6.jpg" target="_blank"
+        ><img src="images/art6.jpg" alt="more cats"
+      /></a>
+    </div>
+
+    <footer>
+      © 2025 Suraj Thapa | Email:
+      <a href="mailto:kunwar.kritika@tbc.edu.np" style="color: #ffbfbf"
+        >kunwar.kritika@tbc.edu.np</a
+      >
+    </footer>
+  </body>
+</html>

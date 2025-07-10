@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Suraj Thapa</title>
+    <style>
+      body {
+        background: #f4f9fb;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      header {
+        background: #123c69;
+        padding: 1rem;
+        color: white;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: #ff6f61;
+      }
+      main {
+        padding: 2rem;
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        margin-top: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px #ccc;
+      }
+      label {
+        display: block;
+        margin-top: 1rem;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.6rem;
+        margin-top: 0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .error {
+        color: red;
+        font-size: 0.9rem;
+      }
+      button {
+        margin-top: 1.5rem;
+        background: #123c69;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #ff6f61;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label
+          >Name:
+          <input type="text" id="name" name="name" />
+          <div class="error" id="nameErr"></div>
+        </label>
+        <label
+          >Email:
+          <input type="email" id="email" name="email" />
+          <div class="error" id="emailErr"></div>
+        </label>
+        <label
+          >Message:
+          <textarea id="message" name="message"></textarea>
+          <div class="error" id="msgErr"></div>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let valid = true;
+          const name = document.getElementById("name");
+          const email = document.getElementById("email");
+          const message = document.getElementById("message");
+          const nameErr = document.getElementById("nameErr");
+          const emailErr = document.getElementById("emailErr");
+          const msgErr = document.getElementById("msgErr");
+
+          nameErr.textContent = emailErr.textContent = msgErr.textContent = "";
+
+          if (name.value.trim().length < 3) {
+            nameErr.textContent = "Name must be at least 3 characters.";
+            valid = false;
+          }
+
+          if (!email.value.includes("@")) {
+            emailErr.textContent = "Enter a valid email.";
+            valid = false;
+          }
+
+          if (message.value.trim().length < 10) {
+            msgErr.textContent = "Message must be at least 10 characters.";
+            valid = false;
+          }
+
+          if (valid) {
+            alert("Thank you! Message sent.");
+            this.reset();
+          }
+        });
+    </script>
+  </body>
+</html>
